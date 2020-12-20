@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Bitely</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/tailwind.min.css">
+    <link rel="stylesheet" href="./css/hamburgers.min.css">
+</head>
+<style>
+    :root{
+        --primary: #B3241B;
+        --secondary: #E99838;
+    }
+    body{
+        font-family: 'Quicksand';
+    }
+    .bg-primary{
+        background-color: var(--primary);
+    }
+    .text-primary{
+        color: var(--primary);
+    }
+    .text-secondary{
+        color: var(--secondary);
+    }
+    .btn-bg-trans{
+        background-color: rgba(255, 255, 255, 0.27);
+    }
+    .btn-border{
+        border: 3px solid var(--secondary);
+    }
+    @media screen and (min-width: 768px){
+        .headText{
+            font-size: 38px;
+            line-height: 38px;
+        }
+    }
+    @media screen and (max-width: 767px){
+        nav{
+            transition: .4s ease;
+        }
+        .nav-collapsed{
+            margin-top: -110%;
+            transition: .4s ease;
+        }
+    }
+    
+</style>
+<body class="bg-gray-50">
+        <div class="w-full lg:hidden z-40 p-8 absolute" x-data="{ active: false }">
+            <div class="hamburger text-white bg-primary rounded-lg float-right is-active mx-auto w-max" :class="{ 'hamburger--3dx': active == true}" @click="active = ! active">
+            <div class="hamburger-box" >
+              <div class="hamburger-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="absolute z-40 rounded-3xl mt-6 lg:-mt-6 ml-10 bg-white shadow-xl lg:px-6 lg:py-8 lg:pt-4 py-2 px-4">
+            <img src="./img/bitely.png" alt="Bitely!" class="w-32 mt-0 lg:mt-6">
+        </div>
+    </div>
+
+    <nav class="absolute mx-auto w-full z-0 nav-collapsed">
+        <div class="lg:bg-transparent bg-gray-50 lg:ml-auto lg:w-max lg:pt-10 pt-32 p-10">
+            <ul class="lg:flex lg:text-white items-center font-semibold">
+                <a href="./index.html"><li class="lg:px-8 py-2">Home</li></a>
+                <li class="lg:px-8 py-2">Blog</li>
+                <a href=""><li class="lg:px-8 py-2">About</li></a>
+                <a href="./registration.html"><li class="lg:px-8 py-2">Restaurant Registration</li></a>
+                <li class="py-2"><button class="btn-border btn-bg-trans focus:outline-none hover:shadow-lg rounded-full px-8 py-3">Login</button></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        $('.hamburger').on('click', function(){
+            $('nav').toggleClass('nav-collapsed');
+        })
+    </script>
+    <div class="bg-primary px-10 py-32 items-center lg:h-max pt-32">
+        <div class="lg:flex mt-16">
+
+            <form action="" class="lg:px-6 px-1 py-4 lg:w-6/12 w-full">
+                <h1 class="font-semibold text-white text-xl lg:text-3xl text-center my-6">Registration Form</h1>
+                <input placeholder="Username" type="text" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner">
+                <input placeholder="Email Address" type="email" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner">
+                <input placeholder="Phone Number" type="number" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner">
+                <input placeholder="Location" type="text" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner">
+                <button class="px-4 py-2 text-white focus:outline-none mt-3 rounded-full w-full shadow-inner btn-border btn-bg-trans"> Sign Up <i class="fa fa-chevron-right"></i></button>
+            </form>
+            <div class="">
+                <h1 class="text-white text-xl text-center">GET LISTED ON INDIA’S LEADING ONLINE FOOD DELIVERY MARKETPLACE TODAY</h1>    
+                <div class="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                    <img src="./img/steps/p1.png" alt="step 1">
+                    <img src="./img/steps/p2.png" alt="step 2">
+                    <img src="./img/steps/p3.png" alt="step 3">
+                    <img src="./img/steps/p4.png" alt="step 4">
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <h1 class="font-semibold text-white text-4xl my-3">Bitely Registration</h1>
+            <h1 class="font-semibold text-white text-xl">Procedure to partner with Bitely</h1>
+            <h3 class="text-white lg:w-96"> Online food ordering is gradually on the rise and this has awaken several restaurants to partner with Bitely. The procedure to partner with Bitely is given below.</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 text-white mt-10">
+                <div class="lg:w-96">
+                    <h1 class="text-2xl font-semibold"><span class="text-4xl">Step 1:</span> Contact Bitely</h1>
+                    <h3>To partner with UniqueOn, the restaurant has to leave an enquiry on the organization’s Partner Registration Webpage.</h3>
+                </div>
+                <div class="lg:w-96">
+                    <h1 class="text-2xl font-semibold"><span class="text-4xl">Step 2:</span> Connecting with a Sales Representative</h1>
+                    <h3>A sales representative from Bitely will connect with the applicants.</h3>
+                </div>
+                <div class="lg:w-96">
+                    <h1 class="text-2xl font-semibold"><span class="text-4xl">Step 3:</span> Meeting with Sales Representative</h1>
+                    <h3>A Representative of UniqueOn will meet the applicant in person to determine their demands and other requirements.</h3>
+                </div>
+                <div class="lg:w-96">
+                    <h1 class="text-2xl font-semibold"><span class="text-4xl">Step 4:</span> Agreeing with Terms and Conditions</h1>
+                    <h3>The applicant and the sales representatives must enter into an agreement.</h3>
+                </div>
+                <div class="lg:w-96">
+                    <h1 class="text-2xl font-semibold"><span class="text-4xl">Step 5:</span> Gathering of Records</h1>
+                    <h3>After agreeing to the terms, a few fundamental records are gathered and dissected within a couple of days.</h3>
+                </div>
+                <div class="lg:w-96">
+                    <h1 class="text-2xl font-semibold"><span class="text-4xl">Step 6:</span> Becoming a partner</h1>
+                    <h3>After the completion of these formalities, the restaurants will be conferred as partners of Bitely.</h3>
+                </div>
+            </div>
+        </div>
+        <h1 class="font-semibold text-2xl lg:text-3xl text-white mt-8"> Documents Required</h1>
+        <ol class="list-decimal text-white lg:p-6 p-2">
+            <li>The following are the documents required to become a Bitely partner.</li>
+            <li>Document portraying FSSAI registration.</li>
+            <li>Partnership PAN Card.</li>
+            <li>A cancelled cheque for Swiggy restaurant registration.</li>
+            <li>A copy of GST Registration and the tax details.</li>
+            <li>Details of the proprietors.</li>
+        </ol>
+    </div>
+    
+</body>
+</html>

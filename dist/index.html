@@ -53,8 +53,6 @@
     
 </style>
 <body class="bg-gray-50">
-
-
         <div class="w-full lg:hidden z-40 p-8 absolute" x-data="{ active: false }">
             <div class="hamburger text-white bg-primary rounded-lg float-right is-active mx-auto w-max" :class="{ 'hamburger--3dx': active == true}" @click="active = ! active">
             <div class="hamburger-box" >
@@ -74,7 +72,7 @@
             <ul class="lg:flex lg:text-white items-center font-semibold">
                 <li class="lg:px-8 py-2">Home</li>
                 <li class="lg:px-8 py-2">Blog</li>
-                <li class="lg:px-8 py-2">About</li>
+                <a href="./about.html"><li class="lg:px-8 py-2">About</li></a>
                 <li class="lg:px-8 py-2">Restaurant Registration</li>
                 <li class="py-2"><button class="btn-border btn-bg-trans focus:outline-none hover:shadow-lg rounded-full px-8 py-3">Login</button></li>
             </ul>
@@ -92,7 +90,7 @@
         <div class="lg:px-32 w-full order-last text-white">
             <h1 class="font-bold text-2xl headText">Contactless Dining Via Digital Menu</h1>
             <h3 class="font-normal mt-1 text-sm">Much you eat, Much healthier you become.</h3>
-            <button class="px-4 py-2 focus:outline-none mt-3 rounded-full btn-border btn-bg-trans"><i class="fa fa-qrcode"></i> Scan QR Code</button>
+            <a href="http://app.bitely.in/"><button class="px-4 py-2 focus:outline-none mt-3 rounded-full btn-border btn-bg-trans"><i class="fa fa-qrcode"></i> Scan QR Code</button></a>
         </div>
     </div>
     <div class="lg:flex lg:px-32 lg:py-32 items-center">
