@@ -70,8 +70,8 @@
     <nav class="absolute mx-auto w-full z-0 nav-collapsed">
         <div class="lg:bg-transparent bg-gray-50 lg:ml-auto lg:w-max lg:pt-10 pt-32 p-10">
             <ul class="lg:flex lg:text-white items-center font-semibold">
-                <li class="lg:px-8 py-2">Home</li>
-                <li class="lg:px-8 py-2">Blog</li>
+                <a href=""><li class="lg:px-8 py-2">Home</li></a>
+                <a href="./blog.html"><li class="lg:px-8 py-2">Blog</li></a>
                 <a href="./about.html"><li class="lg:px-8 py-2">About</li></a>
                 <a href="./register.html"><li class="lg:px-8 py-2">Restaurant Registration</li></a>
                 <li class="py-2"><button class="btn-border btn-bg-trans focus:outline-none hover:shadow-lg rounded-full px-8 py-3">Login</button></li>
@@ -93,9 +93,30 @@
             <a href="http://app.bitely.in/"><button class="px-4 py-2 focus:outline-none mt-3 rounded-full btn-border btn-bg-trans"><i class="fa fa-qrcode"></i> Scan QR Code</button></a>
         </div>
     </div>
-    <div class="lg:flex lg:px-32 lg:py-32 items-center">
-        <div class="w-full">
-            <div class="mx-auto px-6">
+
+
+    <div class="lg:flex gap-5 items-center mt-16 bg-gray-50 mb-10 px-4 lg:px-10">
+
+        <form action="" class="bg-primary rounded-3xl flex-none py-10 lg:px-6 px-8 lg:py-4 lg:w-2/6 lg:m-6 w-full">
+            <h1 class="font-semibold text-white text-xl lg:text-3xl text-center my-6">Registration Form</h1>
+            <input placeholder="Username" type="text" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner focus:outline-none">
+            <input placeholder="Email Address" type="email" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner focus:outline-none">
+            <input placeholder="Phone Number" type="tel" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner focus:outline-none">
+            <input placeholder="Location" type="text" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner focus:outline-none">
+            <button class="px-4 py-2 text-white focus:outline-none mt-3 rounded-full w-full shadow-inner focus:outline-none btn-border btn-bg-trans"> Sign Up <i class="fa fa-chevron-right"></i></button>
+        </form>
+        <!-- <div class="hidden lg:block">
+            <h1 class="text-white text-xl text-center">GET LISTED ON INDIA’S LEADING ONLINE FOOD DELIVERY MARKETPLACE TODAY</h1>    
+            <div class="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                <img src="./img/steps/p1.png" alt="step 1">
+                <img src="./img/steps/p2.png" alt="step 2">
+                <img src="./img/steps/p3.png" alt="step 3">
+                <img src="./img/steps/p4.png" alt="step 4">
+            </div>
+        </div> -->
+
+        <div class="w-full pt-10 lg:px-16">
+            <div class="mx-auto px-2">
                 <h1 class="lg:text-3xl text-2xl font-bold uppercase text-center text-primary">we are now live on app store!</h1>
                 <h4 class="lg:text-center text-sm my-4">With Bitely, you can dine in the most convenient manner possible. Through the app, you’ll be able to reserve a table at a nearby restaurant and order food right before you arrive at the dining place. This removes any waiting times as much as possible, thereby ensuring that your meals are ready as soon as you arrive. Conveniently place your orders with just a few taps!</h4>
                 <div class="flex mx-auto justify-center px-24 mt-4">
@@ -104,9 +125,9 @@
                 </div>
             </div>
         </div>
-        <div class="lg:ml-28 hidden lg:block px-32 lg:px-18 pt-6">
+        <!-- <div class="lg:ml-28 hidden lg:block px-32 lg:px-18 pt-6">
             <img src="./img/1.png" alt="Image" class="w-70 mx-auto">
-        </div>
+        </div> -->
     </div>
 
     <div class="">
