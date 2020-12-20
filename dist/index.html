@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/tailwind.min.css">
     <link rel="stylesheet" href="./css/hamburgers.min.css">
 </head>
@@ -40,35 +41,49 @@
             line-height: 38px;
         }
     }
+    @media screen and (max-width: 767px){
+        .nav-collapsed{
+            margin-top: -110%;
+        }
+        .nav-appended{
+            margin-top: 0%;
+        }
+    }
+    
 </style>
 <body class="bg-gray-50">
 
-    <div class="w-full lg:hidden z-40 p-8 absolute" x-data="{ active: false }">
-        <div class="hamburger text-white float-right is-active mx-auto w-max" :class="{ 'hamburger--3dx': active == true}" @click="active = ! active">
+
+        <div class="w-full lg:hidden z-40 p-8 absolute" x-data="{ active: false }">
+            <div class="hamburger text-white bg-primary rounded-lg float-right is-active mx-auto w-max" :class="{ 'hamburger--3dx': active == true}" @click="active = ! active">
             <div class="hamburger-box" >
               <div class="hamburger-inner"></div>
             </div>
         </div>
     </div>
 
-    <nav class="">
+    <div class="">
         <div class="absolute z-40 rounded-3xl mt-6 lg:-mt-6 ml-10 bg-white shadow-xl lg:px-6 lg:py-8 lg:pt-4 py-2 px-4">
             <img src="./img/bitely.png" alt="Bitely!" class="w-32 mt-0 lg:mt-6">
         </div>
-    </nav>
+    </div>
 
-    <div class="absolute mx-auto w-full z-0">
-        <div class="lg:bg-transparent bg-gray-50 lg:ml-auto lg:w-max pt-32 p-10">
+    <nav class="absolute mx-auto w-full z-0 nav-collapsed">
+        <div class="lg:bg-transparent bg-gray-50 lg:ml-auto lg:w-max lg:pt-10 pt-32 p-10">
             <ul class="lg:flex lg:text-white items-center font-semibold">
                 <li class="lg:px-8 py-2">Home</li>
                 <li class="lg:px-8 py-2">Blog</li>
                 <li class="lg:px-8 py-2">About</li>
                 <li class="lg:px-8 py-2">Restaurant Registration</li>
-                <li><button class="btn-border btn-bg-trans focus:outline-none hover:shadow-lg rounded-full px-8 py-3">Login</button></li>
+                <li class="py-2"><button class="btn-border btn-bg-trans focus:outline-none hover:shadow-lg rounded-full px-8 py-3">Login</button></li>
             </ul>
         </div>
-    </div>
-
+    </nav>
+    <script>
+        $('.hamburger').on('click', function(){
+            $('nav').toggleClass('nav-collapsed');
+        })
+    </script>
     <div class="px-10 py-32 lg:flex items-center lg:h-screen pt-32" style="background-image: url('./img/header.svg'); background-size: cover;">
         <div class="lg:pl-32 w-full">
             <img src="./img/header-dish.png" alt="Dish" class="w-80 mx-auto">
