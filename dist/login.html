@@ -71,7 +71,7 @@
         <div class="lg:bg-transparent bg-gray-50 lg:ml-auto lg:w-max lg:pt-10 pt-32 p-10">
             <ul class="lg:flex lg:text-white items-center font-semibold">
                 <a href="./index.html"><li class="lg:px-8 py-2">Home</li></a>
-                <a href="./blog.html"><li class="lg:px-8 py-2">Blog</li></a>
+                <li class="lg:px-8 py-2">Blog</li>
                 <a href=""><li class="lg:px-8 py-2">About</li></a>
                 <a href="./register.html"><li class="lg:px-8 py-2">Restaurant Registration</li></a>
                 <li class="py-2"><button class="btn-border btn-bg-trans focus:outline-none hover:shadow-lg rounded-full px-8 py-3">Login</button></li>
@@ -83,30 +83,17 @@
             $('nav').toggleClass('nav-collapsed');
         })
     </script>
-    <div class="bg-primary px-10 py-32 items-center lg:h-max pt-32">
-        <h1 class="font-semibold text-3xl text-white">About Us</h1>
-        <div class="lg:flex">
-            <div class="py-10 lg:px-6">
-                <h2 class="font-semibold text-2xl text-white">App Vision</h2>
-                <p class="text-gray-50 py-2 lg:w-96">To make food orders as convenient as possible, allowing users to reserve a table at their preferred restaurant. Uniqueon also makes it possible for users to order the food they want before they even arrive at the restaurant. As a result, they can have their food ready as soon as they sit on the table.</p>
+    <div class="bg-primary px-10 py-32 items-center pt-32">
+        <div class="lg:flex mt-16">
+
+            <form action="" class="lg:px-6 px-1 py-4 lg:w-6/12 w-full">
+                <h1 class="font-semibold text-white text-xl lg:text-3xl text-center my-6">Login Form</h1>
+                <input placeholder="Username" type="text" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner focus:outline-none">
+                <input placeholder="Password" type="password" class="px-6 py-3 my-1 bg-white rounded-full w-full shadow-inner focus:outline-none">
+                <button class="px-4 py-2 text-white focus:outline-none mt-3 rounded-full w-full shadow-inner focus:outline-none btn-border btn-bg-trans"> Login <i class="fa fa-chevron-right"></i></button>
+            </form>
         </div>
-        <div class="py-10 lg:px-6">
-            <h2 class="font-semibold text-white text-2xl">About Us</h2>
-            <p class="text-gray-50 py-2 lg:w-10/12">
-                Uniqueon is founded on the idea that ordering food in a restaurant can be a time-consuming process. Traditionally, you have to call your preferred restaurant to reserve a table. Once you arrive, you will then have to order the food you want from their menu. Once you’ve made your order, it will usually take several minutes, sometimes even an hour, before your meals even get served. As a result, this can lead to frustrations since you’ll have no other choice but wait for the meals to even get ready.
-                <br>
-                <br>
-                However, this problem is taken care of with the help of the Uniqueon app. With Uniqueon, you no longer have to follow the traditional system of dining in restaurants. Instead, you just have to use the app in order to reserve a table in your preferred restaurant, order your food from the menu, and arrive at the dining place with all your meals ready. In other words, your food will be prepared right before your arrival. All you have to do is walk in the restaurant, go to your reserved table, and start eating.
-                <br>
-                <br>
-                This process can help you save a lot of time – and frustration – since all those waiting times you’d normally spend in a traditional dining scene are removed. Not only that, but you also have to option to take orders for food pickups at restaurants near your place!
-                <br>                
-                <br>                
-                Besides, the app comes with a QR reader which you can use to read QR codes from certain restaurants. This will show you their entire menu on your phone, thus allowing you to order straight from the app instead of waiting or even calling for a waiter. This is quite a useful feature since you can order food and get it on time, especially when there are other diners as well. This is also pretty useful in bars.</p>
-            </div>
-        </div>
-    </div>
-    <footer class="bg-gray-100 px-32 py-10">
+    <footer class="w-full bg-gray-100 px-32 py-10">
         <h1 class="text-center py-4">UniqueOn tech services.ltd © 2020. All Rights Reserved.</h1>
         <div class="w-max mx-auto">
             <buttion class="px-3 py-2 bg-gray-200 rounded-full"><i class="fab fa-twitter text-blue-400"></i></buttion>
